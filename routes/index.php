@@ -1,7 +1,7 @@
 <?php
 
     class Router{
-
+        
         protected $handeld = false;
         public function __construct(){}
 
@@ -32,5 +32,5 @@
                 return include_once(views . '404.html');
             }
         }
-        
+
     }
