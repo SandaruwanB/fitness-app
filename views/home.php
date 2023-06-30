@@ -1,9 +1,15 @@
 <?php
-
-    require_once(root. 'database/Connection.php');
-    $connection = new Connection();
-    $connection->getConnection();
    
 ?>
 
-<h1>Home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Place</title>
+</head>
+<body>
+    
+</body>
+</html>
