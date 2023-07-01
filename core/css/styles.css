@@ -45,3 +45,11 @@ a{
 .navbar-brand:hover{
     color: #fff;
 }
+
+.slideshow-content{
+    margin-top: 7%;
+    color: #fff;
+    padding-left: 80px;
+    padding-right: 80px;  
+    text-align: center;  
+}
