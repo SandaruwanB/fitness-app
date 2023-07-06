@@ -3,16 +3,13 @@
     padding: 0;
     margin: 0;
 }
-
 a{
     color: #fff;
 }
-
 .logo{
     border-radius: 50%;
     padding-right: 20px;
 }
-
 .homebg{
     height: 60%;
     width: 100%;
@@ -21,7 +18,6 @@ a{
     z-index: -2;
     object-fit: cover;
 }
-
 .darkPart{
     position: absolute;
     top: 0;
@@ -30,7 +26,6 @@ a{
     height: 60%;
     z-index: -1;
 }
-
 .n-item{
     margin-right: 10px;
 }
@@ -45,11 +40,33 @@ a{
 .navbar-brand:hover{
     color: #fff;
 }
-
 .slideshow-content{
     margin-top: 7%;
     color: #fff;
-    padding-left: 80px;
-    padding-right: 80px;  
+    padding-left: 150px;
+    padding-right: 150px;  
     text-align: center;  
+}
+.prev,
+.next{
+    color: #888;
+    border : none;
+    font-size: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.prev{
+    position: absolute;
+    top: 22%;
+    left: 5%;
+}
+.next{
+    position: absolute;
+    top: 22%;
+    right: 5%;
+}
+.prev:hover,
+.next:hover{
+    font-size: 55px;
 }
