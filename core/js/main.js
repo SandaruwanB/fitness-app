@@ -1,33 +1,19 @@
-/*  ---------------------------------------------------
-  Template Name: Gym
-  Description:  Gym Fitness HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
----------------------------------------------------------  */
 
 'use strict';
 
 (function ($) {
 
-    /*------------------
-        Preloader
-    --------------------*/
     $(window).on('load', function () {
         $(".loader").fadeOut();
         $("#preloder").delay(200).fadeOut("slow");
     });
 
-    /*------------------
-        Background Set
-    --------------------*/
+
     $('.set-bg').each(function () {
         var bg = $(this).data('setbg');
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    //Canvas Menu
     $(".canvas-open").on('click', function () {
         $(".offcanvas-menu-wrapper").addClass("show-offcanvas-menu-wrapper");
         $(".offcanvas-menu-overlay").addClass("active");
@@ -38,7 +24,6 @@
         $(".offcanvas-menu-overlay").removeClass("active");
     });
 
-    // Search model
     $('.search-switch').on('click', function () {
         $('.search-model').fadeIn(400);
     });
@@ -49,24 +34,17 @@
         });
     });
 
-    //Masonary
     $('.gallery').masonry({
         itemSelector: '.gs-item',
         columnWidth: '.grid-sizer',
         gutter: 10
     });
 
-    /*------------------
-		Navigation
-	--------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
 
-    /*------------------
-        Carousel Slider
-    --------------------*/
     var hero_s = $(".hs-slider");
     hero_s.owlCarousel({
         loop: true,
@@ -82,9 +60,7 @@
         autoplay: false
     });
 
-    /*------------------
-        Team Slider
-    --------------------*/
+
     $(".ts-slider").owlCarousel({
         loop: true,
         margin: 0,
@@ -107,9 +83,6 @@
         }
     });
 
-    /*------------------
-        Testimonial Slider
-    --------------------*/
     $(".ts_slider").owlCarousel({
         loop: true,
         margin: 0,
@@ -122,23 +95,15 @@
         autoplay: true
     });
 
-    /*------------------
-        Image Popup
-    --------------------*/
+
     $('.image-popup').magnificPopup({
         type: 'image'
     });
 
-    /*------------------
-        Video Popup
-    --------------------*/
     $('.video-popup').magnificPopup({
         type: 'iframe'
     });
 
-    /*------------------
-        Barfiller
-    --------------------*/
     $('#bar1').barfiller({
         barColor: '#ffffff',
         duration: 2000
