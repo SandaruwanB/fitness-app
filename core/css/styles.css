@@ -58,12 +58,12 @@ a{
 }
 .prev{
     position: absolute;
-    top: 22%;
+    top: 25%;
     left: 5%;
 }
 .next{
     position: absolute;
-    top: 22%;
+    top: 25%;
     right: 5%;
 }
 .prev:hover,
