@@ -441,9 +441,6 @@ ol {
 	display: none;
 }
 
-/*---------------------
-  Hero Section
------------------------*/
 
 .hs-slider.owl-carousel .owl-item.active .hs-item .hi-text span {
 	position: relative;
@@ -538,9 +535,6 @@ ol {
 	opacity: 0;
 }
 
-/*---------------------
-  ChoseUs Section
------------------------*/
 
 .choseus-section {
 	background: #0a0a0a;
@@ -579,9 +573,6 @@ ol {
 	margin-bottom: 16px;
 }
 
-/*---------------------
-  Classes Section
------------------------*/
 
 .classes-section {
 	background: #151515;
@@ -660,9 +651,6 @@ ol {
 	bottom: 26px;
 }
 
-/*---------------------
-  Banner Section
------------------------*/
 
 .banner-section {
 	height: 550px;
@@ -713,10 +701,6 @@ ol {
 	font-size: 36px;
 	color: #ffffff;
 }
-
-/*---------------------
-  Pricing Section
------------------------*/
 
 .pricing-section {
 	background: #151515;
@@ -832,9 +816,6 @@ ol {
 	visibility: hidden;
 }
 
-/*---------------------
-  Gallery Section
------------------------*/
 
 .gallery-section {
 	background: #151515;
@@ -891,9 +872,6 @@ ol {
 	width: calc(50% - 10px);
 }
 
-/*---------------------
-  Team Section
------------------------*/
 
 .team-section {
 	background: #151515;
@@ -1014,9 +992,6 @@ ol {
 	transform: skewY(5deg);
 }
 
-/*---------------------
-  Get Touch Section
------------------------*/
 
 .gettouch-section {
 	background: #0a0a0a;
@@ -1083,9 +1058,6 @@ ol {
 	padding-top: 20px;
 }
 
-/*---------------------
-  Footer
------------------------*/
 
 .footer-section {
 	background: #000000;
@@ -1192,11 +1164,6 @@ ol {
 	color: #f36100;
 }
 
-/* ----------------------------------- Other Pages Styles ----------------------------------- */
-
-/*---------------------
-  Breadcrumb Section
------------------------*/
 
 .breadcrumb-section {
 	height: 500px;
@@ -1236,9 +1203,6 @@ ol {
 	font-weight: 700;
 }
 
-/*---------------------
-  About Us Section
------------------------*/
 
 .about-video {
 	height: 640px;
@@ -1315,9 +1279,6 @@ ol {
 	display: none;
 }
 
-/*---------------------
-  Testimonial Section
------------------------*/
 
 .testimonial-section {
 	background: #151515;
@@ -1376,9 +1337,6 @@ ol {
 	color: #d49d09;
 }
 
-/*---------------------
-  Services Section
------------------------*/
 
 .services-section {
 	background: #151515;
@@ -1455,9 +1413,6 @@ ol {
 	transition: all 0.3s;
 }
 
-/*---------------------
-  Class Timetable Section
------------------------*/
 
 .class-timetable-section {
 	background: #151515;
@@ -1654,9 +1609,6 @@ ol {
 	color: #a9a9a9;
 }
 
-/*---------------------
-  Class Details Section
------------------------*/
 
 .class-details-section {
 	background: #151515;
@@ -1921,9 +1873,6 @@ ol {
 	margin-bottom: 10px;
 }
 
-/*------------------------
-  Bmi Calculator Section
--------------------------*/
 
 .bmi-calculator-section {
 	background: #151515;
@@ -2019,9 +1968,6 @@ ol {
 	background: #f36100;
 }
 
-/*---------------------
-  Blog Section
------------------------*/
 
 .blog-section {
 	background: #151515;
@@ -2124,9 +2070,7 @@ ol {
 	background: #555555;
 }
 
-/*--------------------------
-  Blog Detils Hero Section
---------------------------*/
+
 
 .blog-details-hero {
 	height: 900px;
@@ -2171,9 +2115,6 @@ ol {
 	display: none;
 }
 
-/*---------------------
-  Blog Details Section
------------------------*/
 
 .blog-details-section {
 	background: #151515;
@@ -2519,9 +2460,6 @@ ol {
 	background: #f36100;
 }
 
-/*---------------------
-  Contact Section
------------------------*/
 
 .contact-section {
 	background: #151515;
@@ -2601,9 +2539,6 @@ ol {
 	width: 100%;
 }
 
-/*---------------------
-  404 Section
------------------------*/
 
 .section-404 {
 	position: fixed;
@@ -2714,7 +2649,6 @@ ol {
 	margin-right: 5px;
 }
 
-/*--------------------------------- Responsive Media Quaries -----------------------------*/
 
 @media only screen and (min-width: 1650px) and (max-width: 1920px) {
 	.nav-menu ul li {
@@ -2728,7 +2662,7 @@ ol {
 	}
 }
 
-/* Medium Device = 1200px */
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.nav-menu ul li {
@@ -2749,7 +2683,6 @@ ol {
 	}
 }
 
-/* Tablet Device = 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.about-text {
@@ -2946,7 +2879,6 @@ ol {
 	}
 }
 
-/* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
 	.offcanvas-menu-overlay {
@@ -3176,7 +3108,6 @@ ol {
 	}
 }
 
-/* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
 	.primary-btn.appoinment-btn {
@@ -3212,3 +3143,46 @@ ol {
 		font-size: 28px;
 	}
 }
+
+
+#snackbar {
+	visibility: hidden; 
+	min-width: 250px; 
+	margin-left: -125px; 
+	background-color: #333; 
+	color: #fff; 
+	text-align: center; 
+	border-radius: 2px;
+	padding: 16px; 
+	position: fixed; 
+	z-index: 2; 
+	left: 50%; 
+	bottom: 30px; 
+  }
+  
+  #snackbar.show {
+	visibility: visible; 
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
+  

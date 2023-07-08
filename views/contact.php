@@ -106,11 +106,11 @@
                 <div class="col-lg-6">
                     <div class="leave-comment">
                         <form method="POST">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Message"></textarea>
-                            <button type="submit">Submit</button>
+                            <input type="text" placeholder="Name" id="name">
+                            <input type="text" placeholder="Email" id="email">
+                            <input type="text" placeholder="Website" id="web">
+                            <textarea placeholder="Message" id="message"></textarea>
+                            <button type="submit" class="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -132,7 +132,10 @@
         </div>
     </section>
 
+    <div id="snackbar">ajdhjksa</div>
+
     <script src="/core/js/jquery-3.3.1.min.js"></script>
+    <script src="/core/js/jquery.min.js"></script>
     <script src="/core/js/bootstrap.min.js"></script>
     <script src="/core/js/jquery.magnific-popup.min.js"></script>
     <script src="/core/js/masonry.pkgd.min.js"></script>
@@ -140,5 +143,46 @@
     <script src="/core/js/jquery.slicknav.js"></script>
     <script src="/core/js/owl.carousel.min.js"></script>
     <script src="/core/js/main.js"></script>
+    <script>
+        $('.submit').click(function (e) { 
+            e.preventDefault();
+            const name = $('#name').val();
+            const email = $('#email').val();
+            const web = $('#web').val();
+            const message = $('#message').val();
+
+            if(name == "" || email == "" || message == ""){
+                showSnackBar('red', "You missed some required fields");
+            }
+            else{
+                $.ajax({
+                    type: "post",
+                    url: "/contact",
+                    data: {
+                        name : name,
+                        email : email,
+                        web : web,
+                        message : message
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        $('#name').val("");
+                        $('#email').val("");
+                        $('#web').val("");
+                        $('#message').val("");
+                        showSnackBar('green', "successfully submitted");                        
+                    }
+                });
+            }
+        });
+
+        function showSnackBar(color, text) {
+            const x = document.getElementById("snackbar");
+            $('#snackbar').addClass("show");
+            $('#snackbar').css("background", color);
+            $('#snackbar').text(text);
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
 </body>
 </html>
