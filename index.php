@@ -10,5 +10,7 @@
     $router->get('/contact', 'contact.php');
     $router->get('/auth', 'login.php');
     $router->get('/admin/home', 'admin/index.php');
+    $router->get('/admin/users', 'admin/users.php');
     $router->post('/contact');
     $router->post('/auth');
+    $router->post('/admin/users');

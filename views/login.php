@@ -75,7 +75,7 @@
                             $('#alert').text("Incorrect Password.Please Check Again.");
                         }
                         else{
-                            window.location.replace('/');
+                            window.location.replace('/admin/home');
                         }
                     }
                 });

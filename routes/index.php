@@ -38,6 +38,14 @@
                 else if($url == '/auth'){
                     self::signIn($con);
                 }
+                else if($url == "/admin/users"){
+                    if($_POST['action'] == "getContent"){
+                        self::getUsers($con);
+                    }
+                    else if($_POST['action'] == "adduser"){
+                        self::addUser($con);
+                    }
+                }
             }
         }
 
@@ -80,6 +88,43 @@
             }
             else{
                 echo "nouser";
+            }
+        }
+
+        private function getUsers($con){
+            $query = mysqli_query($con, "SELECT * FROM users");
+            $finalString = "<tr>";
+            $loop = 1;
+
+            if(mysqli_num_rows($query) > 0){
+                while($row = mysqli_fetch_assoc($query)){
+                    $finalString = $finalString . "<th>".$loop."</th>
+                                    <td>".$row['username']."</td>
+                                    <td>Admin</td>
+                                    <td><button class='btn btn-danger btn-sm' value='".$row['id']."'>Remove</button><button class='btn btn-info btn-sm ml-3' value='".$row['id']."'>Edit</button></td>";
+                    ++$loop;
+                }
+                $finalString = $finalString . "</tr>";
+            }
+            else{
+                $finalString = $finalString . "<td colspan='4'>No Users Found</td></tr>";
+            }
+
+            echo $finalString;
+        }
+
+        private function addUser ($con){
+            $user = $_POST['user'];
+            $password = $_POST['password'];
+
+            $query = mysqli_query($con, "SELECT * FROM users WHERE username = '".$user."'");
+            if(mysqli_num_rows($query) > 0){
+                echo "user";
+            }
+            else{
+                $actPass = password_hash($password, PASSWORD_DEFAULT);
+                $query = mysqli_query($con, "INSERT INTO users(username, password) VALUES('".$user."', '".$actPass."')");
+                echo "success";
             }
         }
     }
