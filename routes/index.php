@@ -1,9 +1,13 @@
 <?php
-
     class Router{
         
         protected $handeld = false;
         public function __construct(){}
+
+        private function getDBConnection(){
+            $server = getenv('DB_SERVER', $_ENV['DB_SERVER']);
+            echo '<script>alert("'.$server.'")</script>';
+        }
 
         public function get($route, $view){
             $url = $_SERVER['REQUEST_URI'];
@@ -23,9 +27,14 @@
             }
             if($url === $route){
                 $this->handeld = true;
-                return include_once(views . $view);
+                /*return include_once(views . $view);*/
+                if($url == '/contact'){
+                    self::getDBConnection();
+                }
             }
         }
+
+
 
         function __destruct(){
             if(!$this->handeld){
